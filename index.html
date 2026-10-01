@@ -2373,6 +2373,48 @@ function closeDetailModal() {
     });
 </script>
 
+async function tarikDataGoogleSheet() {
+    const btnSync = document.getElementById('btnSyncData');
+    if (btnSync) btnSync.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Memuat Data...';
+
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL);
+        const data = await response.json();
+        
+        if (Array.isArray(data) && data.length > 0) {
+            submittedReports = data;
+            // Perbarui penyimpanan lokal master dengan data dari Google Sheet
+            localStorage.setItem('penaHalutData', JSON.stringify(submittedReports));
+            
+            // Refresh tampilan tabel & statistik
+            renderRekapanData();
+            if (typeof renderStatistikData === 'function') {
+                renderStatistikData();
+            }
+        }
+    } catch (error) {
+        console.error("Gagal menarik data dari Google Sheet:", error);
+    } finally {
+        if (btnSync) btnSync.innerHTML = '<i class="fa-solid fa-cloud-arrow-down text-sm"></i> <span>Tarik Data Google Sheet</span>';
+    }
+}
+
+function showPage(pageName) {
+    // ... (kode hide/show halaman yang sudah ada) ...
+
+    if (pageName === 'rekapan') {
+        rekapan?.classList.remove('hidden');
+        btnRekapan?.classList.add('active');
+        // Otomatis tarik data dari Google Sheet saat menu Rekapan dibuka
+        tarikDataGoogleSheet();
+    } else if (pageName === 'statistik') {
+        statistik?.classList.remove('hidden');
+        btnStatistik?.classList.add('active');
+        // Otomatis tarik data dari Google Sheet saat menu Statistik dibuka
+        tarikDataGoogleSheet();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 </body>
 </html>
