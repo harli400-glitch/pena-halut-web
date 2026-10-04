@@ -1619,7 +1619,7 @@ function formatJam(jamStr) {
                 const matchJenis = !filterJenis || (item.jenisKombel && item.jenisKombel.toLowerCase() === filterJenis);
                 const matchNama = !filterNama || (item.namaKombel && item.namaKombel.toLowerCase().includes(filterNama));
                 return matchKec && matchJenis && matchNama;
-            });
+            }).sort((a, b) => b.id - a.id);
 
             // Update Header Counters
             document.getElementById('statTotalPengirim').innerText = submittedReports.length;
@@ -1755,7 +1755,7 @@ function formatJam(jamStr) {
                 }
             });
 
-            const list = Object.values(map);
+            const list = Object.values(map).sort((a, b) => b.count - a.count);
 
             const totalGrupInfo = document.getElementById('statTotalGrupInfo');
             if (totalGrupInfo) totalGrupInfo.innerText = `Menampilkan ${list.length} entri kombel`;
