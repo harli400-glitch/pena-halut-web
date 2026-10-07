@@ -89,23 +89,24 @@
 
         <!-- Navigation Tabs Switcher -->
         <nav class="flex items-center bg-slate-800/80 p-1 rounded-xl border border-slate-700/60 w-full sm:w-auto justify-center flex-wrap sm:flex-nowrap gap-1">
-            <button id="navBeranda" onclick="showPage('beranda')" class="nav-btn active px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
-                <i class="fa-solid fa-house"></i>
-                <span>Beranda</span>
-            </button>
-            <button id="navPelaporan" onclick="showPage('pelaporan')" class="nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
-                <i class="fa-solid fa-clipboard-list"></i>
-                <span>Pelaporan Kombel</span>
-            </button>
-            <button id="navRekapan" onclick="showPage('rekapan')" class="nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
-                <i class="fa-solid fa-table-list"></i>
-                <span>Rekapan Data</span>
-            </button>
-            <button id="navStatistik" onclick="showPage('statistik')" class="nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
-                <i class="fa-solid fa-chart-pie"></i>
-                <span>Statistik Laporan</span>
-            </button>
-        </nav>
+    <button id="navBeranda" onclick="kembaliKeBeranda()" class="nav-btn active px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
+    <i class="fa-solid fa-house"></i>
+    <span>Beranda</span>
+</button>
+    <!-- Tambahkan class 'hidden' pada tiga tombol di bawah ini -->
+    <button id="navPelaporan" onclick="showPage('pelaporan')" class="hidden nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <span>Pelaporan Kombel</span>
+    </button>
+    <button id="navRekapan" onclick="showPage('rekapan')" class="hidden nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
+        <i class="fa-solid fa-table-list"></i>
+        <span>Rekapan Data</span>
+    </button>
+    <button id="navStatistik" onclick="showPage('statistik')" class="hidden nav-btn text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 flex items-center gap-1.5 flex-1 sm:flex-none justify-center">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>Statistik Laporan</span>
+    </button>
+</nav>
     </header>
 
     <div class="max-w-5xl mx-auto">
@@ -137,10 +138,10 @@
                     </p>
                     
                     <div class="pt-2 flex flex-wrap items-center gap-3">
-                        <button onclick="showPage('pelaporan')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center gap-2 transform active:scale-95">
-                            <i class="fa-solid fa-paper-plane"></i>
-                            Buat Laporan Kombel Baru
-                        </button>
+                       <button onclick="bukaFiturPelaporan()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center gap-2 transform active:scale-95">
+    <i class="fa-solid fa-paper-plane"></i>
+    Pelaporan Kegiatan Kombel
+</button>                       
                         <a href="#fiturUtama" class="bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700 font-semibold text-xs sm:text-sm px-5 py-3.5 rounded-xl transition">
                             <i class="fa-solid fa-circle-info mr-1.5 text-blue-400"></i>
                             Jelajahi Layanan
@@ -355,9 +356,9 @@
                         <h2 class="text-lg sm:text-xl font-bold">Alur Pelaporan Kegiatan Kombel</h2>
                         <p class="text-xs text-slate-400 mt-1">4 Langkah praktis mengirimkan laporan kegiatan Komunitas Belajar</p>
                     </div>
-                    <button onclick="showPage('pelaporan')" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition shadow-lg shadow-blue-500/20">
-                        Mulai Isi Form Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </button>
+                   <button onclick="bukaFiturPelaporan()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition shadow-lg shadow-blue-500/20">
+    Pelaporan Kegiatan Kombel <i class="fa-solid fa-arrow-right ml-1"></i>
+</button>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
@@ -1461,6 +1462,42 @@
                 kombelDropdown.classList.add('hidden');
             }
         });
+
+// Fungsi untuk membuka akses fitur laporan saat tombol di Beranda di klik
+        function bukaFiturPelaporan() {
+            // Ambil elemen menu navigasi
+            const navPelaporan = document.getElementById('navPelaporan');
+            const navRekapan = document.getElementById('navRekapan');
+            const navStatistik = document.getElementById('navStatistik');
+
+            // Hapus class 'hidden' untuk menampilkan menu
+            if (navPelaporan) navPelaporan.classList.remove('hidden');
+            if (navRekapan) navRekapan.classList.remove('hidden');
+            if (navStatistik) navStatistik.classList.remove('hidden');
+
+            // Arahkan otomatis ke halaman pelaporan
+            showPage('pelaporan');
+            
+            // Tampilkan notifikasi (opsional, untuk UX yang baik)
+            showToast("Akses Pelaporan & Rekapan telah dibuka!", "success");
+        }
+
+
+// Fungsi untuk kembali ke Beranda dan menyembunyikan menu navigasi laporan
+function kembaliKeBeranda() {
+    // 1. Ambil elemen menu navigasi
+    const navPelaporan = document.getElementById('navPelaporan');
+    const navRekapan = document.getElementById('navRekapan');
+    const navStatistik = document.getElementById('navStatistik');
+
+    // 2. Tambahkan kembali class 'hidden' untuk menyembunyikan menu
+    if (navPelaporan) navPelaporan.classList.add('hidden');
+    if (navRekapan) navRekapan.classList.add('hidden');
+    if (navStatistik) navStatistik.classList.add('hidden');
+
+    // 3. Pindah tampilan ke halaman beranda
+    showPage('beranda');
+}
 
 // Fungsi pembantu untuk mengubah format jam panjang menjadi HH.MM (misal: 08.00)
 function formatJam(jamStr) {
