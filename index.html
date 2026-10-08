@@ -137,18 +137,10 @@
                         Portal terpadu untuk monitoring, verifikasi, dan pelaporan kegiatan Komunitas Belajar (Kombel) di seluruh wilayah Kabupaten Halmahera Utara secara akurat, transparan, dan terstruktur.
                     </p>
                     
-                    <div class="pt-2 flex flex-wrap items-center gap-3">
-                       <button onclick="bukaFiturPelaporan()" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/30 flex items-center gap-2 transform active:scale-95">
-    <i class="fa-solid fa-paper-plane"></i>
-    Pelaporan Kegiatan Kombel
-</button>                       
-                        <a href="#fiturUtama" class="bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700 font-semibold text-xs sm:text-sm px-5 py-3.5 rounded-xl transition">
-                            <i class="fa-solid fa-circle-info mr-1.5 text-blue-400"></i>
-                            Jelajahi Layanan
-                        </a>
-                    </div>
+                    <div class="pt-2 flex flex-wrap items-center gap-3">                   
                 </div>
             </section>
+
 
             <!-- Quick Stats Section -->
             <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -356,10 +348,7 @@
                         <h2 class="text-lg sm:text-xl font-bold">Alur Pelaporan Kegiatan Kombel</h2>
                         <p class="text-xs text-slate-400 mt-1">4 Langkah praktis mengirimkan laporan kegiatan Komunitas Belajar</p>
                     </div>
-                   <button onclick="bukaFiturPelaporan()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition shadow-lg shadow-blue-500/20">
-    Pelaporan Kegiatan Kombel <i class="fa-solid fa-arrow-right ml-1"></i>
-</button>
-                </div>
+                   
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
                     <div class="bg-slate-800/80 p-4 rounded-2xl border border-slate-700/60 relative">
@@ -387,7 +376,111 @@
                     </div>
                 </div>
             </section>
+<!-- ================================================================= -->
+<!-- SECTION KARTU TAUTAN / MENU PINTAS (10 KARTU LINK TAB BARU)       -->
+<!-- ================================================================= -->
+<section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-5">
+    <div>
+        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Akses Cepat</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">
+            Navigasi Layanan & Informasi
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Klik pada kartu di bawah ini untuk membuka halaman atau tautan eksternal di tab baru</p>
+    </div>
 
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+        
+        <!-- 1. Berita -->
+        <a href="https://example.com/berita" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-blue-600 p-4 rounded-2xl border border-slate-200/80 hover:border-blue-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Berita</span>
+        </a>
+
+        <!-- 2. Panduan/Dokumen -->
+        <a href="https://example.com/panduan" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-emerald-600 p-4 rounded-2xl border border-slate-200/80 hover:border-emerald-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Panduan / Dokumen</span>
+        </a>
+
+       <button type="button" onclick="bukaFiturPelaporan()" 
+           class="group w-full bg-slate-50 hover:bg-purple-600 p-4 rounded-2xl border border-slate-200/80 hover:border-purple-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Laporan Kombel</span>
+        </button>
+
+        <!-- 4. Pengurus Kombel -->
+        <a href="https://example.com/pengurus" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-amber-600 p-4 rounded-2xl border border-slate-200/80 hover:border-amber-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Pengurus Kombel</span>
+        </a>
+
+        <!-- 5. Supervisi -->
+        <a href="https://example.com/supervisi" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-indigo-600 p-4 rounded-2xl border border-slate-200/80 hover:border-indigo-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-user-check"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Supervisi</span>
+        </a>
+
+        <!-- 6. Kartu Tambahan 1 (Siap Edit) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-cyan-600 p-4 rounded-2xl border border-slate-200/80 hover:border-cyan-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Kartu Tambahan 1</span>
+        </a>
+
+        <!-- 7. Kartu Tambahan 2 (Siap Edit) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-teal-600 p-4 rounded-2xl border border-slate-200/80 hover:border-teal-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Kartu Tambahan 2</span>
+        </a>
+
+        <!-- 8. Kartu Tambahan 3 (Siap Edit) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-rose-600 p-4 rounded-2xl border border-slate-200/80 hover:border-rose-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Kartu Tambahan 3</span>
+        </a>
+
+        <!-- 9. Kartu Tambahan 4 (Siap Edit) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-orange-600 p-4 rounded-2xl border border-slate-200/80 hover:border-orange-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Kartu Tambahan 4</span>
+        </a>
+
+        <!-- 10. Kartu Tambahan 5 (Siap Edit) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+           class="group bg-slate-50 hover:bg-violet-600 p-4 rounded-2xl border border-slate-200/80 hover:border-violet-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-violet-100 text-violet-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+                <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Kartu Tambahan 5</span>
+        </a>
+
+    </div>
+</section>
             <!-- Footer Beranda -->
             <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-200">
                 <p class="font-medium text-slate-600">PENA HALUT &copy; 2026 - Pengawasan Pendidikan Halmahera Utara</p>
