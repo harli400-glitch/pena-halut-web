@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0052cc">
-<link rel="apple-touch-icon" href="icon-192.png">
-
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PENA HALUT - Pengawasan Pendidikan Halmahera Utara</title>
@@ -444,14 +437,16 @@
     <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Pencarian Kombel</span>
 </a>
 
-        <!-- 6. Supervisi -->
-        <a href="https://example.com/supervisi" target="_blank" rel="noopener noreferrer" 
-           class="group bg-slate-50 hover:bg-indigo-600 p-4 rounded-2xl border border-slate-200/80 hover:border-indigo-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
-                <i class="fa-solid fa-user-check"></i>
-            </div>
-            <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">Supervisi</span>
-        </a>
+       <!-- 6. App Android -->
+<a href="https://drive.google.com/file/d/1hm4W8uFPVBndbBo29Glo4QGStjLjZ8x2/view?usp=sharing" target="_blank" rel="noopener noreferrer" 
+   class="group bg-slate-50 hover:bg-indigo-600 p-4 rounded-2xl border border-slate-200/80 hover:border-indigo-600 shadow-sm transition-all duration-300 flex flex-col items-center text-center space-y-2 hover:-translate-y-1">
+    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center text-xl transition-colors">
+        <!-- Mengubah class ikon menjadi fa-brands fa-android -->
+        <i class="fa-brands fa-android"></i>
+    </div>
+    <!-- Mengubah teks menjadi App Android -->
+    <span class="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-white transition-colors">App Android</span>
+</a>
 
        
 
@@ -2187,14 +2182,6 @@ document.addEventListener("click", function(event) {
 
 </script>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service Worker berhasil didaftarkan', reg))
-        .catch(err => console.error('Pendaftaran Service Worker gagal', err));
-    });
-  }
-</script>
+
 </body>
 </html>
